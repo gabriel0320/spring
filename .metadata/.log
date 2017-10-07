@@ -1,4 +1,4 @@
-!SESSION 2017-10-06 19:36:18.643 -----------------------------------------------
+!SESSION 2017-10-06 20:48:40.797 -----------------------------------------------
 eclipse.buildId=3.9.0.201707061823-RELEASE-e47
 java.version=1.8.0_144
 java.vendor=Oracle Corporation
@@ -6,81 +6,108 @@ BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_CO
 Framework arguments:  -product org.springsource.sts.ide
 Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.springsource.sts.ide
 
-!ENTRY org.eclipse.ui 2 2 2017-10-06 19:36:25.568
+!ENTRY org.eclipse.ui 2 2 2017-10-06 20:48:46.135
 !MESSAGE org.eclipse.jdt.junit.ResultView: Deprecated relationship "fast" should be converted to "stack".
 
-!ENTRY org.eclipse.ui 2 2 2017-10-06 19:36:25.574
+!ENTRY org.eclipse.ui 2 2 2017-10-06 20:48:46.142
 !MESSAGE org.springframework.ide.eclipse.aop.ui.navigator.aopReferenceModelNavigator: Deprecated relationship "fast" should be converted to "stack".
 
-!ENTRY org.eclipse.ui 2 2 2017-10-06 19:36:25.580
+!ENTRY org.eclipse.ui 2 2 2017-10-06 20:48:46.147
 !MESSAGE org.eclipse.contribution.xref.ui.views.XReferenceView: Deprecated relationship "fast" should be converted to "stack".
 
-!ENTRY org.eclipse.jface.text 2 0 2017-10-06 19:36:27.588
+!ENTRY org.eclipse.jface.text 2 0 2017-10-06 20:48:46.457
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
 
-!ENTRY org.eclipse.jface.text 2 0 2017-10-06 19:36:27.592
+!ENTRY org.eclipse.jface.text 2 0 2017-10-06 20:48:46.460
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
 
-!ENTRY org.eclipse.egit.ui 2 0 2017-10-06 19:36:29.013
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Gabriel Orrego'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2017-10-06 19:37:25.378 -----------------------------------------------
-eclipse.buildId=3.9.0.201707061823-RELEASE-e47
-java.version=1.8.0_144
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_CO
-Framework arguments:  -product org.springsource.sts.ide
-Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.springsource.sts.ide
-
-!ENTRY org.eclipse.egit.ui 2 0 2017-10-06 19:37:35.292
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-06 20:48:47.546
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Gabriel Orrego'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.lsp4e 1 0 2017-10-06 19:38:47.004
+!ENTRY org.eclipse.lsp4e 1 0 2017-10-06 20:49:12.913
 !MESSAGE Non IFiles not supported yet
 
-!ENTRY Activator 4 0 2017-10-06 19:39:40.161
-!MESSAGE CoreException: Timed out waiting for Spring Cloud CLI to be installed
-!STACK 1
-org.eclipse.core.runtime.CoreException: Timed out waiting for Spring Cloud CLI to be installed
-	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:41)
-	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:32)
-	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:50)
-	at org.springframework.ide.eclipse.boot.util.Log.error(Log.java:56)
-	at org.springframework.ide.eclipse.boot.core.cli.install.ZippedBootInstall.initCloudCliInstall(ZippedBootInstall.java:215)
-	at com.google.common.base.Suppliers$MemoizingSupplier.get(Suppliers.java:125)
-	at org.springframework.ide.eclipse.boot.core.cli.install.ZippedBootInstall.getCloudCliInstall(ZippedBootInstall.java:228)
-	at org.springframework.ide.eclipse.boot.core.cli.install.BootInstall.getExtension(BootInstall.java:296)
-	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.fetchLocalServices(LocalBootDashModel.java:288)
+!ENTRY org.eclipse.lsp4e 1 0 2017-10-06 20:49:12.948
+!MESSAGE Non IFiles not supported yet
+
+!ENTRY Activator 4 0 2017-10-06 20:49:50.572
+!MESSAGE NullPointerException: null
+!STACK 0
+com.google.common.util.concurrent.UncheckedExecutionException: java.lang.NullPointerException
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2199)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3932)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3936)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4806)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalCloudServiceDashElement.getLaunchConfigs(LocalCloudServiceDashElement.java:144)
+	at org.springframework.ide.eclipse.boot.dash.model.AbstractLaunchConfigurationsDashElement$3.compute(AbstractLaunchConfigurationsDashElement.java:414)
+	at org.springframework.ide.eclipse.boot.dash.model.AbstractLaunchConfigurationsDashElement$3.compute(AbstractLaunchConfigurationsDashElement.java:1)
+	at org.springsource.ide.eclipse.commons.livexp.core.LiveExpression.refresh(LiveExpression.java:64)
+	at org.springframework.ide.eclipse.boot.dash.model.AbstractLaunchConfigurationsDashElement.createRunStateExp(AbstractLaunchConfigurationsDashElement.java:446)
+	at org.springframework.ide.eclipse.boot.dash.model.AbstractLaunchConfigurationsDashElement.<init>(AbstractLaunchConfigurationsDashElement.java:105)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalCloudServiceDashElement.<init>(LocalCloudServiceDashElement.java:73)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.lambda$3(LocalBootDashModel.java:293)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.fetchLocalServices(LocalBootDashModel.java:293)
 	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.access$3(LocalBootDashModel.java:284)
 	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel$6.run(LocalBootDashModel.java:313)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
-!SUBENTRY 1 Activator 4 0 2017-10-06 19:39:40.162
-!MESSAGE Timed out waiting for Spring Cloud CLI to be installed
+Caused by: java.lang.NullPointerException
+	at org.eclipse.debug.internal.core.LaunchManager.isValidLaunchConfigurationName(LaunchManager.java:2706)
+	at org.eclipse.debug.internal.core.LaunchConfigurationType.newInstance(LaunchConfigurationType.java:473)
+	at org.springframework.ide.eclipse.boot.launch.cli.CloudCliServiceLaunchConfigurationDelegate.createLaunchConfig(CloudCliServiceLaunchConfigurationDelegate.java:156)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalCloudServiceDashElement$1.load(LocalCloudServiceDashElement.java:68)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalCloudServiceDashElement$1.load(LocalCloudServiceDashElement.java:1)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3522)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2315)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2193)
+	... 22 more
 
-!ENTRY Activator 4 0 2017-10-06 19:39:41.880
-!MESSAGE CoreException: Failed to determine Spring Cloud CLI version
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to determine Spring Cloud CLI version
-	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:41)
-	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:32)
-	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:50)
-	at org.springframework.ide.eclipse.boot.core.cli.install.CloudCliInstall.getVersion(CloudCliInstall.java:109)
-	at org.springframework.ide.eclipse.boot.core.cli.install.CachingCloudCliInstall.lambda$0(CachingCloudCliInstall.java:32)
-	at com.google.common.base.Suppliers$MemoizingSupplier.get(Suppliers.java:125)
-	at org.springframework.ide.eclipse.boot.core.cli.install.CachingCloudCliInstall.getVersion(CachingCloudCliInstall.java:43)
-	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.fetchLocalServices(LocalBootDashModel.java:290)
+!ENTRY Activator 4 0 2017-10-06 20:49:50.577
+!MESSAGE NullPointerException: null
+!STACK 0
+com.google.common.util.concurrent.UncheckedExecutionException: java.lang.NullPointerException
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2199)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3932)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3936)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4806)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalCloudServiceDashElement.getLaunchConfigs(LocalCloudServiceDashElement.java:144)
+	at org.springframework.ide.eclipse.boot.dash.model.AbstractLaunchConfigurationsDashElement$3.compute(AbstractLaunchConfigurationsDashElement.java:414)
+	at org.springframework.ide.eclipse.boot.dash.model.AbstractLaunchConfigurationsDashElement$3.compute(AbstractLaunchConfigurationsDashElement.java:1)
+	at org.springsource.ide.eclipse.commons.livexp.core.LiveExpression.refresh(LiveExpression.java:64)
+	at org.springframework.ide.eclipse.boot.dash.model.AbstractLaunchConfigurationsDashElement.createRunStateExp(AbstractLaunchConfigurationsDashElement.java:446)
+	at org.springframework.ide.eclipse.boot.dash.model.AbstractLaunchConfigurationsDashElement.<init>(AbstractLaunchConfigurationsDashElement.java:105)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalCloudServiceDashElement.<init>(LocalCloudServiceDashElement.java:73)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.lambda$3(LocalBootDashModel.java:293)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.fetchLocalServices(LocalBootDashModel.java:293)
 	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel.access$3(LocalBootDashModel.java:284)
 	at org.springframework.ide.eclipse.boot.dash.model.LocalBootDashModel$6.run(LocalBootDashModel.java:313)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
-!SUBENTRY 1 Activator 4 0 2017-10-06 19:39:41.880
-!MESSAGE Failed to determine Spring Cloud CLI version
-
-!ENTRY org.eclipse.lsp4e 1 0 2017-10-06 19:50:15.142
-!MESSAGE Non IFiles not supported yet
+Caused by: java.lang.NullPointerException
+	at org.eclipse.debug.internal.core.LaunchManager.isValidLaunchConfigurationName(LaunchManager.java:2706)
+	at org.eclipse.debug.internal.core.LaunchConfigurationType.newInstance(LaunchConfigurationType.java:473)
+	at org.springframework.ide.eclipse.boot.launch.cli.CloudCliServiceLaunchConfigurationDelegate.createLaunchConfig(CloudCliServiceLaunchConfigurationDelegate.java:156)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalCloudServiceDashElement$1.load(LocalCloudServiceDashElement.java:68)
+	at org.springframework.ide.eclipse.boot.dash.model.LocalCloudServiceDashElement$1.load(LocalCloudServiceDashElement.java:1)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3522)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2315)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2193)
+	... 22 more

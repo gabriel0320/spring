@@ -1,4 +1,4 @@
-package controller;
+package com.udemy.backendninja.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/say")
 public class HelloWordController {
 	
-	@GetMapping("/helloword")
+	@GetMapping("/hello")
 	public String helloword() {
-		return "Helloword";
+		return "helloword";
 	}
 
 }
